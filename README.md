@@ -1,8 +1,9 @@
-# covalent-probe-discovery
+# pClaw
 
-A Claw / OpenClaw / AutoClaw-compatible skill for surveying chemistry
-literature and identifying covalent reactive handles ("warheads") for a
-target amino-acid residue or side-chain functionality.
+pClaw packages the `covalent-probe-discovery` skill for Claw / OpenClaw /
+AutoClaw. It surveys chemistry literature and identifies covalent reactive
+handles ("warheads") for a target amino-acid residue or side-chain
+functionality.
 
 The repository is meant to be installed into an agent skills directory. The
 agent reads [SKILL.md](SKILL.md), uses the prompt files under
@@ -18,7 +19,7 @@ For OpenClaw / AutoClaw:
 
 ```bash
 mkdir -p ~/.openclaw-autoclaw/skills
-git clone <repo-url> ~/.openclaw-autoclaw/skills/covalent-probe-discovery
+git clone https://github.com/mr-johnee/pClaw.git ~/.openclaw-autoclaw/skills/covalent-probe-discovery
 cd ~/.openclaw-autoclaw/skills/covalent-probe-discovery
 ```
 

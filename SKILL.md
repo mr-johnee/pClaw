@@ -112,7 +112,7 @@ All examples below assume the current working directory is the run directory
 and `$SKILL_DIR` points to the skill root:
 
 ```bash
-export SKILL_DIR="/absolute/path/to/covalent-probe-discovery-1.0.0"
+export SKILL_DIR="/absolute/path/to/covalent-probe-discovery"
 ```
 
 An orchestrator for the deterministic steps (2, 4, 5b) is provided:
