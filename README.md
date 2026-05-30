@@ -11,6 +11,10 @@ agent reads [SKILL.md](SKILL.md), uses the prompt files under
 [scripts/](scripts/) for PubMed search, open-access PDF retrieval, SMILES
 validation, structure rendering, and ranking.
 
+Naming note: `pClaw` is the repository name. The skill registered in
+[SKILL.md](SKILL.md) is named `covalent-probe-discovery`, so that is the name
+to use when asking an agent to run it.
+
 ![Pipeline outline](outline.jpg)
 
 ## Install as a Claw skill
@@ -19,8 +23,8 @@ For OpenClaw / AutoClaw:
 
 ```bash
 mkdir -p ~/.openclaw-autoclaw/skills
-git clone https://github.com/mr-johnee/pClaw.git ~/.openclaw-autoclaw/skills/covalent-probe-discovery
-cd ~/.openclaw-autoclaw/skills/covalent-probe-discovery
+git clone https://github.com/mr-johnee/pClaw.git ~/.openclaw-autoclaw/skills/pClaw
+cd ~/.openclaw-autoclaw/skills/pClaw
 ```
 
 If you copy the folder manually, make sure the installed folder contains

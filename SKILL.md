@@ -56,9 +56,11 @@ human report.
 ## Setup
 
 Install this repository as a skill folder first (for example under
-`~/.openclaw-autoclaw/skills/covalent-probe-discovery/` for OpenClaw /
-AutoClaw). The installed folder must contain this `SKILL.md`, plus the
-bundled `scripts/`, `references/`, and `data/` directories.
+`~/.openclaw-autoclaw/skills/pClaw/` for OpenClaw / AutoClaw). The installed
+folder must contain this `SKILL.md`, plus the bundled `scripts/`,
+`references/`, and `data/` directories. The folder name may be `pClaw`; the
+registered skill name is the `name` field at the top of this file:
+`covalent-probe-discovery`.
 
 ### Python dependencies
 
@@ -112,7 +114,7 @@ All examples below assume the current working directory is the run directory
 and `$SKILL_DIR` points to the skill root:
 
 ```bash
-export SKILL_DIR="/absolute/path/to/covalent-probe-discovery"
+export SKILL_DIR="/absolute/path/to/pClaw"
 ```
 
 An orchestrator for the deterministic steps (2, 4, 5b) is provided:
