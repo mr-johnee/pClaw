@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local environment files
+.env
+.env.*
+*.env
+!env.example.sh
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Claude Code local settings
+.claude/
+.claude/settings.local.json
+
+# Run artifacts (produced by the pipeline, not source)
+keywords.txt
+pubmed_results.json
+shortlist.json
+candidates.json
+candidates.enriched.json
+report.md
+pdfs/
+images/

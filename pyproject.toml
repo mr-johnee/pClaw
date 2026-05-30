@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "covalent-probe-discovery"
+version = "1.0.0"
+description = "Literature-mining pipeline for novel covalent warhead discovery."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = [
+    "chemistry",
+    "cheminformatics",
+    "covalent-probe",
+    "warhead-discovery",
+    "medicinal-chemistry",
+    "literature-mining",
+    "pubmed",
+    "rdkit",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = [
+    "httpx>=0.25",
+    "rdkit>=2023.9",
+    "jsonschema>=4.21",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "pytest-cov>=4",
+]
+
+[project.scripts]
+covalent-probe-pubmed = "scripts.pubmed_search:main"
+covalent-probe-download = "scripts.download_pdf:main"
+covalent-probe-render = "scripts.smiles_to_image:main"
+covalent-probe-rank = "scripts.rank_downloaded:main"
+covalent-probe-validate = "scripts.validate_candidates:main"
+
+[tool.setuptools]
+packages = ["chemdeep_pdf", "scripts"]
+include-package-data = true
+
+[tool.setuptools.data-files]
+"share/covalent-probe-discovery" = [
+    "SKILL.md",
+    "README.md",
+    "LICENSE",
+    "requirements.txt",
+    "env.example.sh",
+    "outline.jpg",
+]
+"share/covalent-probe-discovery/data" = [
+    "data/known_warheads.json",
+]
+"share/covalent-probe-discovery/references" = [
+    "references/prompt-keyword-generation.md",
+    "references/prompt-relevance-scoring.md",
+    "references/prompt-structure-extraction.md",
+    "references/prompt-report-composition.md",
+    "references/candidate.schema.json",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

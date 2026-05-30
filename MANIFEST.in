@@ -1,0 +1,10 @@
+include SKILL.md
+include README.md
+include LICENSE
+include requirements.txt
+include env.example.sh
+include outline.jpg
+include data/*.json
+include references/*.md
+include references/*.json
+recursive-include tests *.py

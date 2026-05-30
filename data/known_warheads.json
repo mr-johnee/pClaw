@@ -1,0 +1,80 @@
+{
+  "_metadata": {
+    "description": "Known-warhead / reactive-structure exclusion library. During full-text extraction (structure-extraction prompt), any reported structure whose class matches an entry in this file is skipped so that only novel candidates are reported.",
+    "schema": "Keyed by target residue. Each value is a list of warhead class names (free-form labels, matched case-insensitively against the class assigned by the structure-extraction prompt).",
+    "source_name": "PDBcov / CovBinderInPDB",
+    "source_url": "https://yzhang.hpc.nyu.edu/CovBinderInPDB",
+    "source_note": "Initial warhead-class vocabulary derived from PDBcov / CovBinderInPDB and manually curated into residue-keyed exclusion lists for this skill.",
+    "version": "1.0.0",
+    "last_updated": "2026-04-22",
+    "license": "CC BY 4.0"
+  },
+  "Histidine": [
+    "Haloacetamide", "Sulfonyl_Halide", "α-halomethyl_Ketone", "α,β-unsaturated_Carbonyl",
+    "Acrylate", "β-lactone", "Alkyl_Halide", "Alkyne", "Thiophosphonate_Ester",
+    "4-halo-α-pyrone", "Epoxide", "α-halocarboxylic_Acid", "Unclassified",
+    "Boronic_Acid", "Amitrole", "Ketone", "Alkenyl_Halide", "α-cyanovinyl_Carbonyl",
+    "Acrylamide", "Thiosulfonate", "Aldehyde", "Conjugated_System", "Phosphoric_Acid",
+    "Butadienyl_Carbonyl", "Ene_Ynone", "Cyclic_Boronic_Acid"
+  ],
+  "Cysteine": [
+    "α-ketoamide", "Aldehyde", "Nitrile", "α-halomethyl_Ketone", "Catechol",
+    "Vinyl_Sulfone", "Haloacetamide", "Butadienyl_Carbonyl", "Acrylate", "Acrylamide",
+    "α-hydroxy_Sulfonic_Acid", "Ketone", "α-cyanovinyl_Carbonyl", "β-lactam",
+    "Unclassified", "Alkyl_Halide", "Aryl_Sulfone", "Azanitrile", "Epoxide",
+    "Disulfide", "Cyclopropane", "Acylphosphonate", "Propynamide", "Vinyl_Sulfonamide",
+    "α-amino_Carbonyl", "Nitroso", "Ubiquitin_Aldehyde", "Thiol", "Uridine",
+    "Aryl_Halide", "α,β-unsaturated_Carbonyl", "α-diazomethyl_Ketone",
+    "α-acyloxymethyl_Ketone", "β-sulfonylvinyl_Carbonyl", "Purine", "Nitroarene",
+    "Conjugated_System", "Isothiocyanate", "Thiosulfonate", "α-aryloxymethyl_Ketone",
+    "α-haloamide", "Ester", "Carboxylic_Acid", "β-sulfonylvinyl_Nitrile",
+    "Vinyl_Sulfonate", "Aziridine", "Thioester", "Urea", "β-lactone",
+    "Haloacetamidine", "γ-lactone", "Alkyne", "Isothiazolinone", "Amidine",
+    "Oxycarbonyl-disulfide", "Haloisoxazoline", "Alkenyl_Halide", "Azo",
+    "Enamine", "Nitroalkene", "α-halocarboxylate", "Sulfoxide", "Imidazolidinone",
+    "Hydrazide", "Aldehyde_Adduct", "Mannich_Base", "Isocyanide", "Thioether",
+    "Boronic_Acid"
+  ],
+  "Serine": [
+    "β-lactam", "Phosphonate_Ester", "Halophosphonate", "Boronic_Acid",
+    "Sulfonyl_Halide", "Ketone", "Ester", "Halophosphate", "Aldehyde",
+    "Sulfonate_Ester", "Imidazolidinone", "1,3-oxazin-6-one", "Carbamate",
+    "Isoxazolidin-3-one", "Phosphate_Ester", "Cyclic_Boronic_Acid", "Urea",
+    "α-ketoamide", "Phosphoric_Acid", "O-acyl_Hydroxamic_Acid", "Cyclic_Acylphosphate",
+    "Thiophosphonate_Ester", "Carboxylic_Acid", "β-lactone", "Phosphorothioate_Ester",
+    "4-halo-α-pyrone", "γ-lactam", "Nitrile", "Cyclic_Phosphate_Ester", "γ-lactone",
+    "Amide", "α-diazomethyl_Ketone", "Unclassified", "β-sultam", "Thioester",
+    "Hydrazide", "Phosphoramido_Nitrile", "3H-1,3-oxazine-2,6-dione",
+    "Sulfonic_Acid", "Aminohalophosphate", "Glycoside", "Cyclic_Borate",
+    "Boric_Acid", "α-halomethyl_Ketone", "Carbonate", "Aryl_Sulfone", "α-pyrone"
+  ],
+  "Lysine": [
+    "Aryl_Halide", "Ketone", "Sulfonyl_Halide", "Aldehyde", "Isothiocyanate",
+    "Epoxide", "Unclassified", "Azide", "Conjugated_System", "Ester",
+    "Boronic_Acid", "Nitrile", "Alkenyl_Halide", "Alkene", "Hydroxylammonium",
+    "Acrylamide", "Vinyl_Sulfonamide", "Vinyl_Sulfone", "α,β-unsaturated_Carbonyl",
+    "Halosulfate", "Cyclic_Boronic_Acid", "Thioester", "Alkyne", "Acrylate",
+    "Furan", "Carboxylic_Acid", "Azo"
+  ],
+  "Aspartic Acid": [
+    "Epoxide", "Hemiacetal", "Glycosyl_Halide", "Aziridine", "Alkyl_Halide",
+    "Cyclosulfate", "Glycoside", "Aryl_Ether", "α-halocarboxylic_Acid", "Allyl_Vinyl_Ether"
+  ],
+  "Glutamic Acid": [
+    "Glycoside", "Aziridine", "Epoxide", "α-halomethyl_Ketone", "Haloacetamide",
+    "Nicotinamide_Riboside", "Cyclosulfate", "Glycosyl_Halide", "Isoxazole",
+    "Alkyl_Halide", "Thiirane", "β-lactone", "Unclassified", "Boronic_Acid"
+  ],
+  "Tyrosine": [
+    "Glycosyl_Halide", "Sulfonyl_Halide", "Alkyne", "Halosulfate",
+    "Phosphonate_Ester", "Phosphate_Ester", "Ketone"
+  ],
+  "Threonine": [
+    "Ketone", "β-lactone", "Vinyl_Sulfone", "Boronic_Acid", "α-ketoamide",
+    "Aldehyde", "Acrylamide", "Epoxide", "Unclassified", "Haloisoxazoline",
+    "Ester", "Phosphate_Ester", "Boric_Acid", "Alkenyl_Halide", "Phosphonate_Ester"
+  ],
+  "Methionine": [
+    "Epoxide"
+  ]
+}

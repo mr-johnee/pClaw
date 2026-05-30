@@ -1,0 +1,3 @@
+httpx>=0.25
+rdkit>=2023.9
+jsonschema>=4.21

@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://covalent-probe-discovery.local/schemas/candidate.schema.json",
+  "title": "Covalent Probe Discovery Candidate List",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": true,
+    "required": [
+      "id",
+      "source_doi",
+      "source_title",
+      "source_journal",
+      "source_year",
+      "source_authors",
+      "warhead_smiles",
+      "warhead_name",
+      "mechanistic_family",
+      "mechanistic_family_normalized",
+      "target_residue",
+      "reaction_mechanism",
+      "evidence",
+      "structure_source",
+      "novelty_reasoning",
+      "structure_role",
+      "manual_review_status",
+      "reactivity_score",
+      "reactivity_confidence",
+      "smiles_confidence"
+    ],
+    "properties": {
+      "id": {"type": "integer", "minimum": 1},
+      "source_doi": {"type": "string", "minLength": 1},
+      "source_pmid": {"type": "string"},
+      "source_title": {"type": "string", "minLength": 1},
+      "source_journal": {"type": "string", "minLength": 1},
+      "source_year": {"type": ["integer", "string"]},
+      "source_authors": {
+        "type": "array",
+        "minItems": 1,
+        "items": {"type": "string", "minLength": 1}
+      },
+      "warhead_smiles": {"type": "string", "minLength": 1},
+      "parent_smiles": {"type": "string"},
+      "warhead_name": {"type": "string", "minLength": 1},
+      "mechanistic_family": {"type": "string", "minLength": 1},
+      "mechanistic_family_normalized": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+      },
+      "target_residue": {"type": "string", "minLength": 1},
+      "reaction_mechanism": {"type": "string", "minLength": 1},
+      "physiological_conditions": {"type": "string"},
+      "kinetics": {"type": "string"},
+      "selectivity_notes": {"type": "string"},
+      "evidence": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["claim", "quote", "location"],
+          "properties": {
+            "claim": {"type": "string", "minLength": 1},
+            "quote": {"type": "string", "minLength": 1},
+            "location": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["type", "id", "page"],
+              "properties": {
+                "type": {"enum": ["figure", "scheme", "table", "text"]},
+                "id": {"type": "string", "minLength": 1},
+                "page": {"type": "integer", "minimum": 1}
+              }
+            }
+          }
+        }
+      },
+      "structure_source": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "id", "page", "screenshot_path"],
+        "properties": {
+          "type": {"enum": ["figure", "scheme", "table"]},
+          "id": {"type": "string", "minLength": 1},
+          "page": {"type": "integer", "minimum": 1},
+          "screenshot_path": {"type": "string"}
+        }
+      },
+      "novelty_reasoning": {"type": "string", "minLength": 1},
+      "structure_role": {"enum": ["core_candidate", "supporting_structure"]},
+      "manual_review_status": {
+        "enum": [
+          "model_extracted",
+          "needs_manual_review",
+          "human_confirmed",
+          "rejected_after_review"
+        ]
+      },
+      "reactivity_score": {"type": "number", "minimum": 1, "maximum": 10},
+      "reactivity_confidence": {"type": "number", "minimum": 1, "maximum": 10},
+      "smiles_confidence": {"type": "number", "minimum": 1, "maximum": 10}
+    }
+  }
+}
